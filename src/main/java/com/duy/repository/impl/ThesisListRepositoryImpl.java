@@ -245,6 +245,6 @@ public class ThesisListRepositoryImpl implements ThesisListRepository {
         Query query = session.createQuery(q);
 
         return query.getResultList();
-
     }
 }
+

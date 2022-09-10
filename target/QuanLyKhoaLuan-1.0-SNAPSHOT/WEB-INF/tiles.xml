@@ -113,7 +113,7 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     <definition name="performCouncil" extends="baseLayout">
         <put-attribute name="title" value="Tùy chỉnh hội đồng" />
         <put-attribute name="content"
-                       value="/WEB-INF/jsp/performThesis.jsp" />
+                       value="/WEB-INF/jsp/performCouncil.jsp" />
     </definition>
     <definition name="Teacher" extends="baseLayout">
         <put-attribute name="title" value="Giang Vien" />

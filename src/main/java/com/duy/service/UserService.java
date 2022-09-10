@@ -53,5 +53,5 @@ public interface UserService extends UserDetailsService{
     
     long countStudentDoThesis(int thesisId);
     long countTeacherDoThesis(int thesisId);
-   
+    long countTeacherInCouncil(int councilId);
 }

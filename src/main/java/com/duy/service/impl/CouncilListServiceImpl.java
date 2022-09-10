@@ -6,6 +6,7 @@ package com.duy.service.impl;
 
 import com.duy.pojo.Council;
 import com.duy.pojo.CouncilPosition;
+import com.duy.pojo.Position;
 import com.duy.pojo.ScoreDetail;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,6 +77,11 @@ public class CouncilListServiceImpl implements CouncilListService {
     @Override
     public List<Object[]> getCouncilPos(int councilId, int councilPos) {
         return this.councilListRepository.getCouncilPos(councilId, councilPos);
+    }
+
+    @Override
+    public List<Position> getPosCouncil() {
+        return this.councilListRepository.getPosCouncil();
     }
 
    

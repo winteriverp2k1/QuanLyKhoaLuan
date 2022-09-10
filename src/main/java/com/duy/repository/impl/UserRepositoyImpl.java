@@ -7,6 +7,7 @@ package com.duy.repository.impl;
 import com.duy.pojo.CouncilPosition;
 import com.duy.pojo.User;
 import com.duy.pojo.Faculty;
+import com.duy.pojo.Position;
 import com.duy.pojo.Thesis;
 import com.duy.pojo.ThesisPosition;
 import com.duy.repository.UserRepository;
@@ -420,6 +421,28 @@ public class UserRepositoyImpl implements UserRepository {
         predicates.add(P2);
         Predicate P3 = b.equal(Ruser.get("userRole"), "ROLE_GiangVien");
         predicates.add(P3);
+
+        q.where(predicates.toArray(new Predicate[]{}));
+        Query query = session.createQuery(q);
+        Object result = query.getSingleResult();
+        return (long) result;       
+    }
+
+    @Override
+    public long countTeacherInCouncil(int councilId) {
+        Session session = this.sessionFactory.getObject().getCurrentSession();
+        CriteriaBuilder b = session.getCriteriaBuilder();
+        CriteriaQuery<Object[]> q = b.createQuery(Object[].class);
+
+        Root<CouncilPosition> Rp = q.from(CouncilPosition.class);
+        
+
+        q.multiselect(b.count(Rp.get("id")));
+
+        List<Predicate> predicates = new ArrayList<>();
+;
+        Predicate P2 = b.equal(Rp.get("councilId"), councilId);
+        predicates.add(P2);
 
         q.where(predicates.toArray(new Predicate[]{}));
         Query query = session.createQuery(q);

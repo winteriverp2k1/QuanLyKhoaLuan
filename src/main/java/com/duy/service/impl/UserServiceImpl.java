@@ -183,4 +183,9 @@ public class UserServiceImpl implements UserService {
         return this.userRepository.countTeacherDoThesis(thesisId);
     }
 
+    @Override
+    public long countTeacherInCouncil(int councilId) {
+        return this.userRepository.countTeacherInCouncil(councilId);
+    }
+
 }

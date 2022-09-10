@@ -6,6 +6,7 @@ package com.duy.repository.impl;
 
 import com.duy.pojo.Council;
 import com.duy.pojo.CouncilPosition;
+import com.duy.pojo.Position;
 import com.duy.pojo.Score;
 import com.duy.pojo.ScoreDetail;
 import com.duy.pojo.Thesis;
@@ -193,6 +194,13 @@ public class CouncilListRepositoryImpl implements CouncilListRepository {
         tp.where(predicates.toArray(new Predicate[]{}));
         Query query = session.createQuery(tp);
         return query.getResultList();
+    }
+
+    @Override
+    public List<Position> getPosCouncil() {
+        Session s = this.sessionFactory.getObject().getCurrentSession();
+        Query q = s.createQuery("From Position");
+        return q.getResultList();
     }
 
 }

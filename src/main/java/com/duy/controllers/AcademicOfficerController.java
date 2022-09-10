@@ -369,6 +369,8 @@
 package com.duy.controllers;
 
 import com.duy.pojo.Council;
+import com.duy.pojo.CouncilPosition;
+import com.duy.pojo.Position;
 import com.duy.pojo.Thesis;
 import com.duy.pojo.ThesisPosition;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -523,7 +525,7 @@ public class AcademicOfficerController {
         if (!result.hasErrors()) {
             model.addAttribute("thisThesisPos", thesisListService.addThesisPos(thesisPos));
             thesisListService.addThesisPos(thesisPos);
-            return "redirect:/";
+            return "redirect:/academic/manager";
         } else {
             return "redirect:/";
         }
@@ -665,6 +667,33 @@ public class AcademicOfficerController {
 
         }
         return "redirect:/academic/councilList";
+    }
+    
+    @GetMapping("performCouncil/{councilId}")
+    public String doCouncil(Model model, @PathVariable(value = "councilId") int id) {
+        model.addAttribute("council", this.councilListService.getCouncilById(id));
+        Council c = this.councilListService.getCouncilById(id);
+
+        int fId = c.getFacultyId().getId();
+        System.out.println(fId);
+        model.addAttribute("council_position", new CouncilPosition());
+        model.addAttribute("position", this.councilListService.getPosCouncil());
+        System.out.println(this.councilListService.getPosCouncil());
+        model.addAttribute("teachers", this.userDetailsService.getStudentsByFacultyId(fId));     
+        model.addAttribute("count_teachers", this.userDetailsService.countTeacherInCouncil(id));
+
+        return "performCouncil";
+    }
+    @PostMapping("/performCouncil")
+    public String doCouncil(Model model, @ModelAttribute(value = "position") @Valid CouncilPosition cp) {
+        model.addAttribute("council", councilListService.getCouncilById(cp.getCouncilId().getId()));
+
+        if (councilListService.addCouncilPos(cp)) {   
+            return "redirect:/academic/manager";
+        } else {
+            return "redirect:/";
+        }
+//        return "redirect:/";
     }
 }
 

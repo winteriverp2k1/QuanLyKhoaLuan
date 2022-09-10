@@ -6,6 +6,7 @@ package com.duy.service;
 
 import com.duy.pojo.Council;
 import com.duy.pojo.CouncilPosition;
+import com.duy.pojo.Position;
 import com.duy.pojo.Score;
 import com.duy.pojo.ScoreDetail;
 import java.util.List;
@@ -26,5 +27,6 @@ public interface CouncilListService {
     boolean Score(Score score);
     boolean deleteCouncil(int councilId);
     List<Object[]> getCouncilPos(int councilId, int councilPos);
+    List<Position> getPosCouncil();
    
 }

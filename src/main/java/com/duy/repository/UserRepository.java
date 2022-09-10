@@ -49,4 +49,6 @@ public interface UserRepository {
     
     long countStudentDoThesis(int thesisId);
     long countTeacherDoThesis(int thesisId);
+    
+    long countTeacherInCouncil(int councilId);
 }
