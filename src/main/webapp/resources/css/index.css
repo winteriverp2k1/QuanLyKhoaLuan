@@ -1,0 +1,26 @@
+
+.parent {
+	width: 85vw;
+	height: 50vh;
+
+    /* additional style */
+    position: relative;
+}
+
+.child {
+	
+	width: 500px;
+	height: 140px;
+
+    /* additional style */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center { 
+    margin: auto;
+    width: 50%;
+    padding: 2px;
+}

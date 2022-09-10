@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout"
+                template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header"
+                       value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer"
+                       value="/WEB-INF/layout/footer.jsp" />
+    </definition>
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/index.jsp" />
+    </definition>    
+    <definition name="councilList" extends="baseLayout">
+        <put-attribute name="title" value="Danh sách hội đồng" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/councilList.jsp" />
+    </definition>    
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="title" value="Đăng nhập" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/login.jsp" />
+    </definition>  
+    <definition name="register" extends="baseLayout">
+        <put-attribute name="title" value="Đăng ký" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/register.jsp" />
+    </definition>    
+    <definition name="createCouncil" extends="baseLayout">
+        <put-attribute name="title" value="Tạo hội đồng" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/createCouncil.jsp" />
+    </definition>  
+    <definition name="userManager" extends="baseLayout">
+        <put-attribute name="title" value="Quản lý tài khoản" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/userManager.jsp" />
+    </definition>   
+    <definition name="userDetail" extends="baseLayout">
+        <put-attribute name="title" value="Chi tiết tài khoản" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/userDetail.jsp" />
+    </definition>
+    <definition name="thesisManager" extends="baseLayout">
+        <put-attribute name="title" value="Quản lý khóa luận" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/thesisManager.jsp" />
+    </definition>
+    <definition name="createThesis" extends="baseLayout">
+        <put-attribute name="title" value="Tạo khóa luận" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/createThesis.jsp" />
+    </definition>
+    
+    <definition name="adminPage" extends="baseLayout">
+        <put-attribute name="title" value="Quản trị" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/adminPage.jsp" />
+    </definition>
+    
+    <definition name="academicPage" extends="baseLayout">
+        <put-attribute name="title" value="Giáo vụ" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/academicPage.jsp" />
+    </definition>
+    
+    <definition name="thesisList" extends="baseLayout">
+        <put-attribute name="title" value="Danh sách khóa luận" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/thesisList.jsp" />
+    </definition>
+    
+    <definition name="accountDetail" extends="baseLayout">
+        <put-attribute name="title" value="Chi tiết tài khoản" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/accountDetail.jsp" />
+    </definition>
+    
+    <definition name="changePassword" extends="baseLayout">
+        <put-attribute name="title" value="Thay đổi mật khẩu" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/changePassword.jsp" />
+    </definition>
+    
+    <definition name="statistical" extends="baseLayout">
+        <put-attribute name="title" value="Thống kê" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/statistical.jsp" />
+    </definition>
+    
+    <definition name="councilDetail" extends="baseLayout">
+        <put-attribute name="title" value="Chi tiết" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/councilDetail.jsp" />
+    </definition>
+    <definition name="thesis-Detail" extends="baseLayout">
+        <put-attribute name="title" value="Chi tiết khóa luận" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/thesisDetail.jsp" />
+    </definition>
+    <definition name="performThesis" extends="baseLayout">
+        <put-attribute name="title" value="Tùy chỉnh khóa luận" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/performThesis.jsp" />
+    </definition>
+    <definition name="performCouncil" extends="baseLayout">
+        <put-attribute name="title" value="Tùy chỉnh hội đồng" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/performThesis.jsp" />
+    </definition>
+    <definition name="Teacher" extends="baseLayout">
+        <put-attribute name="title" value="Giang Vien" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/Teacher.jsp" />
+    </definition>
+    <definition name="checkPoint" extends="baseLayout">
+        <put-attribute name="title" value="Cham diem" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/checkPoint.jsp" />
+    </definition>
+    <definition name="ThesisByCouncil" extends="baseLayout">
+        <put-attribute name="title" value="Khoa luan" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/ThesisByCouncil.jsp" />
+    </definition>
+    <definition name="AddScore" extends="baseLayout">
+        <put-attribute name="title" value="Them bang diem" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/AddScore.jsp" />
+    </definition>
+    <definition name="detailThesis" extends="baseLayout">
+        <put-attribute name="title" value="Chi tiet" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/detailThesis.jsp" />
+    </definition>
+
+    
+</tiles-definitions>

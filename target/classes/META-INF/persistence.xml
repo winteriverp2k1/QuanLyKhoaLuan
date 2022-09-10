@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.duy_QuanLyKhoaLuan_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.duy.pojo.Thesis</class>
+    <class>com.duy.pojo.ThesisStandard</class>
+    <class>com.duy.pojo.Teacher</class>
+    <class>com.duy.pojo.Major</class>
+    <class>com.duy.pojo.Department</class>
+    <class>com.duy.pojo.Account</class>
+    <class>com.duy.pojo.Admin</class>
+    <class>com.duy.pojo.CouncilPosition</class>
+    <class>com.duy.pojo.Council</class>
+    <class>com.duy.pojo.Ministry</class>
+    <class>com.duy.pojo.TeacherInCouncil</class>
+    <class>com.duy.pojo.Student</class>
+    <class>com.duy.pojo.UserRole</class>
+    <class>com.duy.pojo.SchoolYear</class>
+    <class>com.duy.pojo.ResultNotification</class>
+    <class>com.duy.pojo.RebuttalNotification</class>
+    <class>com.duy.pojo.CouncilMemberGradeThesis</class>
+    <class>com.duy.pojo.Position</class>
+    <class>com.duy.pojo.Score</class>
+    <class>com.duy.pojo.SroceDetail</class>
+    <class>com.duy.pojo.User</class>
+    <class>com.duy.pojo.Faculty</class>
+    <class>com.duy.pojo.Positionforthesis</class>
+    <class>com.duy.pojo.ThesisPosition</class>
+    <class>com.duy.pojo.ScoreDetail</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/quanlykhoaluan?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="duy24012001duy"/>
+    </properties>
+  </persistence-unit>
+</persistence>
